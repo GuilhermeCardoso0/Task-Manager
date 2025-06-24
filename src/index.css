@@ -1,0 +1,54 @@
+* { box-sizing: border-box; }
+body { margin: 0; padding: 0; font-family: 'Inter', sans-serif; height: 100%; }
+#root { height: 100%; }
+
+:root {
+  --primary-color: #388e3c;
+  --primary-hover: #2e7d32;
+  --border-light: #a5d6a7;
+  --bg-light: #e8f5e9;
+  --bg-page: #ffffff;
+  --text-color: #424242;
+  --toggle-bg: #ffffff;
+  --toggle-color: #2e2e2e;
+}
+
+.dark {
+  --primary-color: #81c784;
+  --primary-hover: #66bb6a;
+  --border-light: #4caf50;
+  --bg-light: #2e7d32;
+  --bg-page: #2e2e2e;
+  --text-color: #e0e0e0;
+  --toggle-bg: #2e2e2e;
+  --toggle-color: #ffffff;
+}
+
+body { background-color: var(--bg-page); color: var(--text-color); }
+.app-wrapper { display: flex; justify-content: center; align-items: center; height: 100%; padding: 20px; background-color: var(--bg-page); }
+.app-container { width: 100%; max-width: 800px; background-color: var(--bg-page); border: 1px solid var(--bg-light); border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); padding: 24px; }
+.app-title { margin-bottom: 16px; font-size: 24px; color: var(--primary-color); }
+.form { display: flex; margin-bottom: 16px; }
+.input { flex: 1; padding: 8px; border: 1px solid var(--border-light); border-radius: 4px; font-size: 14px; background: var(--bg-page); color: var(--text-color); }
+.input:focus { outline: none; border-color: var(--primary-color); }
+.button { padding: 8px 16px; margin-left: 8px; background-color: var(--primary-color); border: none; border-radius: 4px; color: #ffffff; font-size: 14px; cursor: pointer; }
+.button:hover { background-color: var(--primary-hover); }
+.category-card { background-color: var(--bg-page); border: 1px solid var(--bg-light); border-radius: 6px; padding: 16px; margin-bottom: 16px; }
+.category-title { margin: 0 0 8px; color: var(--primary-color); font-size: 18px; }
+.task-item { display: flex; align-items: center; padding: 8px; border: 1px solid var(--bg-light); border-radius: 4px; margin-bottom: 8px; transition: background-color 0.3s; }
+.task-item.done { background-color: var(--bg-light); border-color: var(--border-light); }
+.task-checkbox { margin-right: 12px; }
+.task-text { margin: 0; font-size: 14px; color: var(--text-color); }
+.task-text.done { text-decoration: line-through; color: var(--primary-color); font-weight: bold; }
+.toggle-box {
+  padding: 8px 16px;
+  background-color: var(--toggle-bg);
+  color: var(--toggle-color);
+  border: 1px solid var(--border-light);
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 16px;
+  font-size: 16px;
+  text-align: center;
+  transition: background-color 0.3s, color 0.3s;
+}
